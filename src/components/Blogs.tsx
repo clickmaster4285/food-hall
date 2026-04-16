@@ -5,29 +5,32 @@ import blog2 from "@/assets/blog-2.webp";
 import blog3 from "@/assets/blog-3.webp";
 
 const blogs = [
-  { 
-    tag: "Food Culture", 
-    title: "Why Food Halls Are the Future of Urban Dining", 
-    date: "Mar 15, 2026", 
+  {
+    tag: "Operations",
+    title: "How Modern Food Halls Streamline Multi-Vendor Operations",
+    date: "Mar 15, 2026",
     image: blog1,
-    description: "Discover how food halls are transforming the way we experience dining in cities worldwide.",
-    readTime: "5 min read"
+    description:
+      "Explore how centralized systems improve coordination, reduce delays, and optimize performance across multiple food vendors.",
+    readTime: "5 min read",
   },
-  { 
-    tag: "Events", 
-    title: "Top 5 Events You Can't Miss This Spring", 
-    date: "Mar 10, 2026", 
+  {
+    tag: "Technology",
+    title: "The Role of POS Systems in Food Hall Efficiency",
+    date: "Mar 10, 2026",
     image: blog2,
-    description: "From food festivals to live music, here's what's happening at Food Hall this season.",
-    readTime: "3 min read"
+    description:
+      "Learn how real-time ordering, billing, and analytics are transforming the way food halls operate at scale.",
+    readTime: "3 min read",
   },
-  { 
-    tag: "Chef Spotlight", 
-    title: "Meet Chef Maria: From Street Food to Stardom", 
-    date: "Mar 5, 2026", 
+  {
+    tag: "Vendor Growth",
+    title: "How Small Food Vendors Scale Inside Modern Food Halls",
+    date: "Mar 5, 2026",
     image: blog3,
-    description: "The inspiring journey of how Chef Maria built her culinary empire from humble beginnings.",
-    readTime: "4 min read"
+    description:
+      "A breakdown of how vendors grow revenue and visibility using shared infrastructure and digital ordering systems.",
+    readTime: "4 min read",
   },
 ];
 

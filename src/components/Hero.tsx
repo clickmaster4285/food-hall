@@ -9,17 +9,17 @@ const slides = [
   {
     img: hero1,
     headline: "Where Food Meets Culture",
-    sub: "Come for food, stay for the experience",
+    sub: "A connected ecosystem for vendors, operations, and unforgettable dining experiences.",
   },
   {
     img: hero2,
-    headline: "Every Flavor, One Roof",
-    sub: "Diverse cuisines from around the world",
+    headline: "Every Flavor, One System",
+    sub: "Unified management for multi-vendor food halls with seamless ordering and control.",
   },
   {
     img: hero3,
-    headline: "Nights That Sizzle",
-    sub: "Live experiences, great food, unforgettable vibes",
+    headline: "Built for Busy Food Halls",
+    sub: "Real-time operations, fast checkout, and smooth coordination across every stall.",
   },
 ];
 

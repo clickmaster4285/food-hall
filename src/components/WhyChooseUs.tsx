@@ -5,23 +5,23 @@ import whyUsImg from "@/assets/whyUs.jpg";
 const reasons = [
   {
     num: "01",
-    title: "Curated Quality",
-    desc: "Every vendor is carefully selected to ensure consistency, creativity, and excellence.",
+    title: "Verified Vendor Network",
+    desc: "Only trusted and performance-tested vendors are onboarded to ensure consistent operational quality.",
   },
   {
     num: "02",
-    title: "Community Driven",
-    desc: "We create spaces that support local talent and bring people together through food.",
+    title: "Ecosystem-Focused Platform",
+    desc: "Built to support scalable food hall ecosystems that connect vendors, customers, and management seamlessly.",
   },
   {
     num: "03",
-    title: "Always Fresh Experience",
-    desc: "Rotating menus and seasonal offerings ensure every visit feels new.",
+    title: "Dynamic Operational Flow",
+    desc: "Real-time updates, rotating menus, and adaptive workflows keep the system efficient and responsive.",
   },
   {
     num: "04",
-    title: "All-Day Destination",
-    desc: "From morning coffee to late-night dining — the experience is always active.",
+    title: "Always-On Operations",
+    desc: "Designed for continuous service across peak and off-peak hours with stable performance and reliability.",
   },
 ];
 

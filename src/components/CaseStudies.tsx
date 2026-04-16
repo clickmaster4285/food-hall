@@ -6,12 +6,35 @@ import caseStudyImg from "@/assets/caseStudy.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 50000, label: "Monthly Visitors", desc: "Growing 30% month over month since launch", suffix: "+", prefix: "" },
-  { value: 95, label: "Vendor Retention", desc: "Our vendors love it here — and it shows", suffix: "%", prefix: "" },
-  { value: 4.8, label: "Average Rating", desc: "Across Google, Yelp, and TripAdvisor", suffix: "★", prefix: "" },
-  { value: 200, label: "Events Hosted", desc: "Weddings, birthdays, corporate — we do it all", suffix: "+", prefix: "" },
+  {
+    value: 50000,
+    label: "Monthly Transactions",
+    desc: "High-volume order processing powered through the platform with consistent performance scaling",
+    suffix: "+",
+    prefix: "",
+  },
+  {
+    value: 95,
+    label: "Vendor Platform Retention",
+    desc: "Food vendors continuously operate on the system due to reliability and operational efficiency",
+    suffix: "%",
+    prefix: "",
+  },
+  {
+    value: 4.8,
+    label: "System Reliability Score",
+    desc: "Measured across uptime, order accuracy, and operational performance",
+    suffix: "★",
+    prefix: "",
+  },
+  {
+    value: 200,
+    label: "Managed Events & Operations",
+    desc: "Includes large-scale dining events, peak-hour coordination, and vendor operations support",
+    suffix: "+",
+    prefix: "",
+  },
 ];
-
 const CaseStudies = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [counters, setCounters] = useState(stats.map(() => 0));

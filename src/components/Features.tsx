@@ -5,12 +5,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
-  { icon: "🍴", title: "20+ Food Vendors", desc: "Curated selection of the best local and international chefs" },
-  { icon: "🎵", title: "Live Events Weekly", desc: "Music, comedy nights, food festivals, and pop-ups" },
-  { icon: "🪑", title: "Flexible Seating", desc: "Communal tables, cozy corners, and outdoor patios" },
-  { icon: "👨‍👩‍👧‍👦", title: "Family-Friendly", desc: "Kids play area, high chairs, and family portions" },
-  { icon: "🍺", title: "Craft Bar", desc: "Local craft beers, signature cocktails, and fresh juices" },
-  { icon: "📶", title: "Work-Friendly", desc: "Free WiFi, power outlets, and quiet zones for remote workers" },
+  {
+    icon: "🏢",
+    title: "Multi-Vendor Management",
+    desc: "Centralized control for onboarding, managing, and monitoring 20+ food vendors in one system.",
+  },
+  {
+    icon: "📅",
+    title: "Event & Peak-Time Scheduling",
+    desc: "Plan and manage live events, promotions, and peak-hour operations with full visibility.",
+  },
+  {
+    icon: "📊",
+    title: "Space Utilization Control",
+    desc: "Optimize seating layouts, crowd flow, and space efficiency through real-time data insights.",
+  },
+  {
+    icon: "🔄",
+    title: "Customer Flow Management",
+    desc: "Improve customer experience with intelligent queue handling and service distribution.",
+  },
+  {
+    icon: "💰",
+    title: "Revenue Stream Analytics",
+    desc: "Track sales performance across vendors, categories, and product lines in real time.",
+  },
+  {
+    icon: "🖥️",
+    title: "Operational Dashboard",
+    desc: "Manage staff activity, system performance, and live order flow from a unified dashboard.",
+  },
 ];
 
 const Features = () => {

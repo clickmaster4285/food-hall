@@ -6,16 +6,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const pains = [
   {
-    title: "Limited Dining Variety",
-    desc: "Most spaces offer single-cuisine experiences, limiting exploration and repeat engagement.",
+    title: "Fragmented Vendor Operations",
+    desc: "Food halls often rely on disconnected systems, making it difficult to manage multiple vendors efficiently.",
   },
   {
-    title: "Lack of Culinary Diversity",
-    desc: "Guests often need to visit multiple places to experience different food styles and cultures.",
+    title: "Lack of Unified Ordering System",
+    desc: "Customers and staff must deal with separate workflows for each vendor, leading to inefficiencies and delays.",
   },
   {
-    title: "Weak Social Experience",
-    desc: "Traditional dining spaces rarely encourage interaction, atmosphere, or shared community moments.",
+    title: "Poor Operational Visibility",
+    desc: "Management lacks real-time insight into sales, performance, and order flow across the entire food hall.",
   },
 ];
 

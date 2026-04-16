@@ -5,9 +5,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const solutions = [
-  { icon: "🌮🍜🍕", title: "Multi-Cuisine Paradise", desc: "From tacos to sushi, BBQ to vegan bowls — every craving satisfied under one roof." },
-  { icon: "🎶🎉", title: "Live Social Experience", desc: "Live DJs, themed nights, communal tables — dining becomes an event, not just a meal." },
-  { icon: "✨🔥", title: "Electric Atmosphere", desc: "Neon lights, open kitchens, buzzing energy — feel the vibe the moment you walk in." },
+  {
+    icon: "🌮🍜🍕",
+    title: "Unified Vendor Ecosystem",
+    desc: "Manage multiple food vendors, cuisines, and menus through a single centralized operational platform.",
+  },
+  {
+    icon: "🎶🎉",
+    title: "Event & Engagement Management",
+    desc: "Coordinate live events, peak-time promotions, and customer flow to maximize engagement and revenue.",
+  },
+  {
+    icon: "✨🔥",
+    title: "Optimized Dining Operations",
+    desc: "Enhance efficiency with real-time order tracking, smart routing, and seamless front-to-back coordination.",
+  },
 ];
 
 const Solutions = () => {

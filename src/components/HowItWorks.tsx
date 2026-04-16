@@ -2,10 +2,30 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const steps = [
-  { step: "1", icon: "🚶", title: "Walk In", desc: "No reservations needed. Just show up and explore!" },
-  { step: "2", icon: "👀", title: "Browse & Discover", desc: "Stroll through 20+ stalls and find what excites you." },
-  { step: "3", icon: "🛒", title: "Order Anywhere", desc: "Order from multiple vendors in one visit — mix and match!" },
-  { step: "4", icon: "🎉", title: "Eat, Vibe, Repeat", desc: "Grab a seat, enjoy the music, and soak in the atmosphere." },
+  {
+    step: "1",
+    icon: "🚶",
+    title: "Enter the System",
+    desc: "Customers access a unified digital platform to explore all vendors in one place.",
+  },
+  {
+    step: "2",
+    icon: "👀",
+    title: "Discover Vendors",
+    desc: "Browse integrated menus from multiple food vendors in a single, seamless interface.",
+  },
+  {
+    step: "3",
+    icon: "🛒",
+    title: "Unified Ordering",
+    desc: "Place multiple vendor orders through one checkout system powered by centralized POS.",
+  },
+  {
+    step: "4",
+    icon: "🎉",
+    title: "Smart Fulfillment",
+    desc: "Orders are routed, prepared, and served efficiently with real-time operational tracking.",
+  },
 ];
 
 const HowItWorks = () => {

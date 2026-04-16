@@ -5,40 +5,45 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
-  { 
-    name: "Sarah K.", 
-    role: "Food Blogger & Critic", 
-    quote: "This place is ELECTRIC! The variety is insane and the vibe is unmatched. I bring all my friends here!",
-    company: "Taste Magazine",
-    initial: "S"
+  {
+    name: "Sarah K.",
+    role: "Food Hall Operations Manager",
+    quote:
+      "The platform completely transformed how we manage vendors and orders. Everything is now centralized and significantly more efficient.",
+    company: "Taste Group Operations",
+    initial: "S",
   },
-  { 
-    name: "Marcus J.", 
-    role: "Regular Visitor", 
-    quote: "My family's new weekend tradition. The kids love the play area and we love the food. Win-win!",
-    company: "Local Resident",
-    initial: "M"
+  {
+    name: "Marcus J.",
+    role: "Customer Experience Lead",
+    quote:
+      "We now have full visibility into customer flow and peak hours. It’s helped us optimize staffing and reduce wait times drastically.",
+    company: "Urban Dining Collective",
+    initial: "M",
   },
-  { 
-    name: "Priya R.", 
-    role: "Event Planner", 
-    quote: "Hosted my company holiday party here. The team at DineFlow made everything seamless and delicious.",
-    company: "Elite Events Co.",
-    initial: "P"
+  {
+    name: "Priya R.",
+    role: "Event & Venue Manager",
+    quote:
+      "Managing large-scale events is now seamless. The system handles coordination across vendors without operational bottlenecks.",
+    company: "Elite Venue Management",
+    initial: "P",
   },
-  { 
-    name: "David L.", 
-    role: "Local Chef & Vendor", 
-    quote: "As a vendor, the support and foot traffic are incredible. My business grew 3x in the first year!",
-    company: "David's Kitchen",
-    initial: "D"
+  {
+    name: "David L.",
+    role: "Food Vendor Partner",
+    quote:
+      "As a vendor, the platform gave me real-time insights into sales and performance. It helped me scale my outlet faster than expected.",
+    company: "Independent Vendor",
+    initial: "D",
   },
-  { 
-    name: "Emily W.", 
-    role: "Culinary Enthusiast", 
-    quote: "I've been to food halls around the world. This one has SOUL. The music, the people, the energy — chef's kiss!",
-    company: "Food Critic",
-    initial: "E"
+  {
+    name: "Emily W.",
+    role: "Food Hall Investor",
+    quote:
+      "This system provides the operational transparency we need to evaluate and scale food hall investments confidently.",
+    company: "FoodTech Ventures",
+    initial: "E",
   },
 ];
 

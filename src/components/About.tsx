@@ -111,31 +111,28 @@ const About = () => {
               Who We Are
             </p>
 
-            {/* Title */}
-            <h2 className="section-title  text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0f172a' }}>
-              More Than Just a{" "}
-            <span style={{ background: 'linear-gradient(135deg, #1e293b, #14b8a6, #0ea5e9)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>Food Hall</span>
-            </h2>
+         {/* Title */}
+<h2 className="section-title text-4xl md:text-5xl font-bold mb-6 text-foreground">
+  More Than Just a{" "}
+  <span className="bg-gradient-to-r from-slate-800 via-slate-600 to-sky-600 bg-clip-text text-transparent">
+    Food Hall
+  </span>
+</h2>
 
-            {/* Paragraph 1 */}
-            <p className="about-content text-lg leading-relaxed" style={{ color: '#64748b' }}>
-              We are a modern food hall experience built around community, culture,
-              and shared dining. A place where diverse cuisines come together under
-              one roof to create something more than just a meal.
-            </p>
+{/* Paragraph 1 */}
+<p className="about-content text-lg leading-relaxed text-muted-foreground">
+  A modern food hall platform designed to connect vendors, streamline operations, and elevate multi-cuisine dining experiences under one unified system.
+</p>
 
-            {/* Paragraph 2 */}
-            <p className="about-content text-lg leading-relaxed" style={{ color: '#64748b' }}>
-              From casual meetups to family dinners and social evenings, our space
-              is designed to bring people together through food, atmosphere, and
-              experience — not just dining.
-            </p>
+{/* Paragraph 2 */}
+<p className="about-content text-lg leading-relaxed text-muted-foreground">
+  From daily service to high-traffic peak hours, the platform ensures smooth coordination between customers, stalls, and management creating efficiency at every touchpoint.
+</p>
 
-            {/* Paragraph 3 */}
-            <p className="about-content text-lg leading-relaxed" style={{ color: '#64748b' }}>
-              Every vendor, every dish, and every visit adds to a growing culture of
-              connection, discovery, and modern urban living.
-            </p>
+{/* Paragraph 3 */}
+<p className="about-content text-lg leading-relaxed text-muted-foreground">
+  Every interaction inside the food hall is powered by structure, speed, and clarity enabling a smarter, more connected dining ecosystem.
+</p>
             
    
             

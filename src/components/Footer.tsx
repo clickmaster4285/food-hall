@@ -4,7 +4,9 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
           <h3 className="font-display text-xl text-primary-foreground mb-2">DineFlow</h3>
-          <p className="font-body text-primary-foreground/50 text-sm">Come for food, stay for the experience. Your neighborhood's favorite gathering place.</p>
+          <p className="font-body text-primary-foreground/50 text-sm">
+  A centralized platform for managing vendors, orders, and operations across modern food hall environments.
+</p>
         </div>
         <div>
           <h4 className="font-display text-sm text-primary-foreground mb-3">Quick Links</h4>
