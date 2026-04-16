@@ -1,50 +1,136 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import whyUsImg from "@/assets/whyUs.jpg";
 
 const reasons = [
-  { num: "01", title: "Curated Quality", desc: "Every vendor is handpicked and vetted for quality, taste, and creativity." },
-  { num: "02", title: "Community First", desc: "We support local chefs, create jobs, and build neighborhood connections." },
-  { num: "03", title: "Always Fresh", desc: "Rotating vendors and seasonal menus keep things exciting every visit." },
-  { num: "04", title: "All-Day Destination", desc: "Morning coffee to late-night bites — we're here whenever hunger strikes." },
+  {
+    num: "01",
+    title: "Curated Quality",
+    desc: "Every vendor is carefully selected to ensure consistency, creativity, and excellence.",
+  },
+  {
+    num: "02",
+    title: "Community Driven",
+    desc: "We create spaces that support local talent and bring people together through food.",
+  },
+  {
+    num: "03",
+    title: "Always Fresh Experience",
+    desc: "Rotating menus and seasonal offerings ensure every visit feels new.",
+  },
+  {
+    num: "04",
+    title: "All-Day Destination",
+    desc: "From morning coffee to late-night dining — the experience is always active.",
+  },
 ];
 
 const WhyChooseUs = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const animatedRef = useRef(false);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".why-item", {
-        scrollTrigger: { trigger: ref.current, start: "top 80%" },
-        x: 80,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: "power3.out",
-      });
-    }, ref);
-    return () => ctx.revert();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !animatedRef.current) {
+            const items = document.querySelectorAll(".why-item");
+            const image = document.querySelector(".why-image");
+            
+            gsap.fromTo(items,
+              { x: -40, opacity: 0 },
+              {
+                x: 0,
+                opacity: 1,
+                duration: 0.7,
+                stagger: 0.12,
+                ease: "power3.out",
+              }
+            );
+            
+            gsap.fromTo(image,
+              { x: 40, opacity: 0, scale: 0.9 },
+              {
+                x: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 0.8,
+                ease: "power3.out",
+                onComplete: () => {
+                  animatedRef.current = true;
+                },
+              }
+            );
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
   }, []);
 
   return (
-    <section ref={ref} className="section-padding bg-foreground">
-      <div className="container mx-auto max-w-4xl">
-        <p className="font-body text-primary font-semibold mb-2 uppercase tracking-widest text-sm text-center">Why Us</p>
-        <h2 className="font-display text-4xl md:text-5xl text-primary-foreground text-center mb-12">
-          Why Choose <span className="text-gradient-fire">FoodHall?</span>
+    <section ref={ref} className="py-20 md:py-28 px-4 md:px-8" style={{ backgroundColor: '#f8fafc' }}>
+      <div className="container mx-auto max-w-7xl">
+        
+        {/* Label */}
+        <p className="text-sm font-semibold mb-3 uppercase tracking-widest text-center" style={{ color: '#14b8a6' }}>
+          Why Choose Us
+        </p>
+
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 leading-tight" style={{ color: '#0f172a' }}>
+          Why Choose <span style={{ background: 'linear-gradient(135deg, #14b8a6, #0ea5e9)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>Food Hall?</span>
         </h2>
-        <div className="space-y-6">
-          {reasons.map((r, i) => (
-            <div key={i} className="why-item flex items-start gap-6 bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-6 hover:border-primary/40 transition-colors">
-              <span className="font-display text-3xl text-primary shrink-0">{r.num}</span>
-              <div>
-                <h3 className="font-display text-xl text-primary-foreground mb-1">{r.title}</h3>
-                <p className="font-body text-primary-foreground/60">{r.desc}</p>
+
+        {/* Grid Layout - Stack on mobile, side by side on desktop */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          
+          {/* Left side - List (shows first on mobile) */}
+          <div className="flex-1 space-y-5 order-2 lg:order-1">
+            {reasons.map((r, i) => (
+              <div
+                key={i}
+                className="why-item flex items-start gap-6 bg-white border border-gray-200 rounded-2xl p-6 hover:border-teal-400/40 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              >
+                <span className="text-3xl md:text-4xl shrink-0 font-bold transition-all duration-300 group-hover:scale-110" style={{ color: '#14b8a6' }}>
+                  {r.num}
+                </span>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-1 transition-all duration-300 group-hover:text-teal-600" style={{ color: '#0f172a' }}>
+                    {r.title}
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {r.desc}
+                  </p>
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Right side - Image (shows on top on mobile) */}
+          <div className="flex-1 order-1 lg:order-2">
+            <div className="why-image rounded-2xl overflow-hidden shadow-xl sticky top-24">
+              <img 
+                src={whyUsImg} 
+                alt="Why Choose Food Hall" 
+                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
             </div>
-          ))}
+          </div>
+          
         </div>
       </div>
     </section>

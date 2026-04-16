@@ -31,8 +31,8 @@ const Solutions = () => {
     <section ref={ref} className="section-padding bg-background">
       <div className="container mx-auto">
         <p className="font-body text-secondary font-semibold mb-2 uppercase tracking-widest text-sm text-center">The Solution</p>
-        <h2 className="font-display text-4xl md:text-5xl text-foreground text-center mb-12">
-          Welcome to <span className="text-gradient-fire">The Experience</span>
+        <h2 className="section-title text-4xl md:text-5xl font-bold text-center mb-6" style={{ color: '#0f172a' }}>
+          Welcome to <span style={{ background: 'linear-gradient(135deg, #1e293b, #14b8a6, #0ea5e9)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>The Experience</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {solutions.map((s, i) => (

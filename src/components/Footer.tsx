@@ -1,9 +1,9 @@
 const Footer = () => (
   <footer className="bg-foreground py-12 px-4">
-    <div className="container mx-auto max-w-5xl">
+    <div className="container mx-auto max-w-6xl">
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
-          <h3 className="font-display text-xl text-primary-foreground mb-4">🔥 FoodHall</h3>
+          <h3 className="font-display text-xl text-primary-foreground mb-2">DineFlow</h3>
           <p className="font-body text-primary-foreground/50 text-sm">Come for food, stay for the experience. Your neighborhood's favorite gathering place.</p>
         </div>
         <div>
@@ -26,7 +26,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 pt-6 text-center">
-        <p className="font-body text-primary-foreground/30 text-sm">© 2026 FoodHall. All rights reserved. Made with 🔥</p>
+        <p className="font-body text-primary-foreground/30 text-sm">© 2026 DineFlow. All rights reserved. </p>
       </div>
     </div>
   </footer>

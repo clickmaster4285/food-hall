@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+        "/api": {
+          target: "https://software.clickmasters.pk",
+          changeOrigin: true,
+          secure: true,
+        },
+      },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

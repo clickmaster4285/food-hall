@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,58 +6,50 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 20 10% 12%;
+    /* 🌿 Clean urban light background */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 12%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 12%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 18 90% 55%;
+    /* 🧭 PRIMARY = GRAPHITE (professional base) */
+    --primary: 222 47% 11%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 175 60% 40%;
+    /* 🌊 SECONDARY = TEAL (Food Hall identity color) */
+    --secondary: 174 62% 47%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 20% 93%;
-    --muted-foreground: 20 8% 45%;
+    /* 💧 Accent = cool modern blue */
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11%;
 
-    --accent: 45 95% 58%;
-    --accent-foreground: 20 10% 12%;
+    /* 🌫 Muted surfaces */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --destructive: 0 75% 52%;
+    /* ❌ Destructive */
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --fire: 0 80% 55%;
-    --fire-foreground: 0 0% 100%;
+    /* 🧱 Borders */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 62% 47%;
 
-    --teal: 175 60% 40%;
-    --teal-foreground: 0 0% 100%;
+    --radius: 0.95rem;
 
-    --warm: 45 95% 58%;
-    --warm-foreground: 20 10% 12%;
-
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 18 90% 55%;
-
-    --radius: 0.75rem;
-
-    --font-display: 'Dela Gothic One', sans-serif;
-    --font-body: 'Space Grotesk', sans-serif;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* ✨ Typography system */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
   }
 }
+
+/* ---------------- BASE STYLES ---------------- */
 
 @layer base {
   * {
@@ -71,33 +63,56 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 
+/* ---------------- UTILITIES ---------------- */
+
 @layer utilities {
+
   .font-display {
     font-family: var(--font-display);
   }
+
   .font-body {
     font-family: var(--font-body);
   }
-  .text-gradient-fire {
+
+  /* ✨ Primary gradient (clean teal focus) */
+  .text-gradient-primary {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--fire)), hsl(var(--accent)));
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--secondary)),
+      hsl(var(--accent))
+    );
   }
-  .bg-gradient-fire {
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--fire)));
+
+  .bg-gradient-primary {
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--secondary)),
+      hsl(var(--accent))
+    );
   }
-  .bg-gradient-teal {
-    background-image: linear-gradient(135deg, hsl(var(--teal)), hsl(175 70% 50%));
+
+  .bg-gradient-soft {
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(var(--muted))
+    );
   }
-  .bg-gradient-warm {
-    background-image: linear-gradient(135deg, hsl(var(--warm)), hsl(var(--primary)));
-  }
+
+  /* 📐 Layout spacing system */
   .section-padding {
     @apply py-20 md:py-28 px-4 md:px-8;
   }
 }
+
+/* ---------------- GLOBAL ---------------- */
 
 html {
   scroll-behavior: smooth;

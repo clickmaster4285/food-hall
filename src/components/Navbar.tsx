@@ -27,9 +27,9 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4">
-        <a href="#" className="font-display text-2xl text-primary-foreground">
-          🔥 FoodHall
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+        <a href="#" className="font-display text-2xl text-primary-foreground font-bold">
+          DineFlow
         </a>
 
         {/* Desktop */}
@@ -45,7 +45,7 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
-            className="bg-gradient-fire text-primary-foreground px-5 py-2 rounded-full font-body font-semibold text-sm hover:opacity-90 transition-opacity"
+            className="bg-secondary text-primary px-5 py-2 rounded-full font-body font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             Book Now
           </a>
@@ -55,6 +55,7 @@ const Navbar = () => {
         <button
           className="md:hidden text-primary-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
           <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             {mobileOpen ? (
@@ -68,17 +69,25 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-foreground/95 backdrop-blur-md px-6 pb-6">
+        <div className="md:hidden bg-foreground/95 backdrop-blur-md px-6 pb-6 pt-2">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-2 text-primary-foreground/80 hover:text-primary font-body"
+              className="block py-3 text-primary-foreground/80 hover:text-secondary font-body transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </a>
           ))}
+          {/* Book Now button in mobile menu */}
+          <a
+            href="#contact"
+            className="block mt-4 bg-secondary text-primary px-5 py-3 rounded-full font-body font-semibold text-sm text-center hover:opacity-90 transition-opacity"
+            onClick={() => setMobileOpen(false)}
+          >
+            Book Now
+          </a>
         </div>
       )}
     </nav>
