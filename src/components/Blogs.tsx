@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import blog1 from "@/assets/blog-1.webp";
 import blog2 from "@/assets/blog-2.webp";
-import blog3 from "@/assets/blog-3.webp";
+import blog3 from "@/assets/blogs-3.webp";
 
 const blogs = [
   {
